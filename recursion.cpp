@@ -42,6 +42,16 @@ public:
         rever(n , i+1);
         cout << i << " ";
     }
+
+    int summer(int n){
+        if(n == 1) return 1;
+        return n+summer(n-1);
+    }
+
+    int digits(int n){
+        if(n ==0) return 0;
+        return 1 + digits(n/10);
+    }
 };
 
 int main()
@@ -51,7 +61,8 @@ int main()
     cin >> n;
 
     Recursion obj;
-    obj.rever(n);
+    int result = obj.digits(n);
+    cout << result <<endl;
 
     return 0;
 }
