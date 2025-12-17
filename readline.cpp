@@ -9,4 +9,13 @@ int main()
         cout << line << endl;
     }
     in.close();
+
+    cout << "------------" << endl;
+    ifstream in2("data2.txt");
+    string word;
+    while (in2 >> word)
+    {
+        cout << word << endl;
+    }
+    in2.close();
 }
