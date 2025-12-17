@@ -56,6 +56,12 @@ public:
         if (n == 0) return rev;
         return revdigit(n/10,rev*10 + n%10);
     }
+
+    int revdigit20(int n){
+        if(n<10) return n;
+        int d = digits(n);
+        return (n%10) * pow(10,d-1) + revdigit20(n/10);
+    }
 };
 
 int main()
@@ -65,7 +71,7 @@ int main()
     cin >> n;
 
     Recursion obj;
-    int result = obj.revdigit(n);
+    int result = obj.revdigit20(n);
     cout << result <<endl;
 
     return 0;
