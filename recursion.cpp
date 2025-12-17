@@ -35,6 +35,13 @@ public:
             cout << endl;
         }
     }
+    void rever(int n, int i =1){
+        if(i==n+1){
+            return;
+        }
+        rever(n , i+1);
+        cout << i << " ";
+    }
 };
 
 int main()
@@ -44,7 +51,7 @@ int main()
     cin >> n;
 
     Recursion obj;
-    obj.printton(n);
+    obj.rever(n);
 
     return 0;
 }
