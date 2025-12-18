@@ -56,7 +56,8 @@ public:
         char c = 65;
         for (int i = 1; i <= 10; i++)
         {
-            mp[i] = c + 1;
+            mp[i] = c;
+            c++;
         }
         auto ptr = mp.find(2);
         cout << &ptr << endl;
@@ -122,4 +123,25 @@ int main()
 {
     Test test;
     test.armstrong(153);
+    cout << "---------------------------" << endl;
+
+    test.intro();
+    cout << "---------------------------" << endl;
+
+    test.mapp();
+    cout << "---------------------------" << endl;
+
+    test.queuee();
+    cout << "---------------------------" << endl;
+
+    test.staack();
+    cout << "---------------------------" << endl;
+
+    test.unordere_set();
+    cout << "---------------------------" << endl;
+
+    test.vect();
+    cout << "---------------------------" << endl;
+
+    return 0;
 }
