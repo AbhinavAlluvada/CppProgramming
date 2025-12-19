@@ -61,22 +61,46 @@ public:
             return a.length()<b.length(); });
         return vect;
     }
+    deque<int> arrangeeo(const vector <int>& vect){
+        deque <int> res;
+        for(int i : vect){
+            if(i%2==0){
+                res.push_front(i);
+            }
+            else{
+                res.push_back(i);
+            }
+        }
+        return res;
+        
+    }
+
+    vector<pair<string, int>> student(const vector<pair<string,int>> &res){
+        vector<pair<string,int>> vect = res;
+        sort(vect.begin(),vect.end(),[](pair<string , int> a, pair<string , int> b){
+            if(a.second == b.second){
+                return a.first.length() > b.first.length();
+            }
+            return a.second>b.second;
+
+        });
+        return vect;
+    }
 };
 int main()
 {
     test obj;
-    vector<string> v = {"apple", "bat", "banana", "kiwi", "apricot"};
-    for (string str : v)
-    {
-        cout << str << " ";
-    }
-    cout << endl;
-    vector<string> vect = obj.sortstring(v);
-    for (string str : vect)
-    {
-        cout << str << " ";
-    }
-    cout << endl;
+vector<pair<string, int>> students = {
+    {"Alice", 85},
+    {"Bob", 92},
+    {"Charlie", 85},
+    {"Dave", 70},
+    {"Eve", 92}
+};
 
+    vector<pair<string,int>> result = obj.student(students);
+    for(pair<string , int> i : result){
+        cout << i.first << ": "<< i.second << endl;
+    }
     return 0;
 }
