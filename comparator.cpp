@@ -9,10 +9,22 @@ void printqueue(priority_queue<int> temp)
     }
     cout << endl;
 }
+bool cmp(int a, int b)
+{
+    return a < b; // a comes before b if a is larger
+}
+void printvect(vector<int> vect)
+{
+    for (int &i : vect)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
+}
 int main()
 {
     priority_queue<int> pq;
-    vector<int> vect = {1, 2, 3, 9, 5, 6, 7};
+    vector<int> vect = {1, 12, 3, 19, 5, 16, 7};
     for (int &i : vect)
     {
         pq.push(i);
@@ -31,6 +43,8 @@ int main()
         temp.pop();
     }
     cout << endl;
+    sort(vect.begin(), vect.end(), cmp);
+    printvect(vect);
 
     return 0;
 }
