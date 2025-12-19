@@ -86,21 +86,27 @@ public:
         });
         return vect;
     }
+
+    bool arraycheck(const vector<int> &vect){
+        for(int i =0;i+1<vect.size();i++){
+            if(vect[i]>=vect[i+1]){
+                continue;
+            }
+            return false;
+        }
+        return true;
+    }
 };
 int main()
 {
     test obj;
-vector<pair<string, int>> students = {
-    {"Alice", 85},
-    {"Bob", 92},
-    {"Charlie", 85},
-    {"Dave", 70},
-    {"Eve", 92}
-};
-
-    vector<pair<string,int>> result = obj.student(students);
-    for(pair<string , int> i : result){
-        cout << i.first << ": "<< i.second << endl;
+    vector <int> vect = {9,8,7,6,15,4,3,2,1};
+    bool check = obj.arraycheck(vect);
+    if(check){
+        cout << "Sorted!"<<endl;
+    }
+    else{
+        cout << "Nah!"<<endl;
     }
     return 0;
 }
