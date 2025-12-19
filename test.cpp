@@ -19,48 +19,64 @@ public:
         }
         cout << endl;
     }
-    void sortpair(vector <pair<int,int>>& vect){
-        sort(vect.begin(),vect.end(),[](const pair<int,int>& a,const pair<int,int>& b){
+    void sortpair(vector<pair<int, int>> &vect)
+    {
+        sort(vect.begin(), vect.end(), [](const pair<int, int> &a, const pair<int, int> &b)
+             {
             if(a.second == b.second){
                 return a.first > b.first;
             }
-            return a.second>b.second;
-        });
+            return a.second>b.second; });
     }
-    void printpair(const vector<pair<int,int>>& vect){
-        for(pair<int,int> i : vect){
-            cout << i.first << ", "<< i.second<<endl;
+    void printpair(const vector<pair<int, int>> &vect)
+    {
+        for (pair<int, int> i : vect)
+        {
+            cout << i.first << ", " << i.second << endl;
         }
     }
-    vector<int> largest(const vector<int>& vect,const int& k){
-        priority_queue <int> pq;
-        for(int i: vect){
+    vector<int> largest(const vector<int> &vect, const int &k)
+    {
+        priority_queue<int> pq;
+        for (int i : vect)
+        {
             pq.push(i);
         }
-        vector <int> result;
-        while(pq.size()>k){
+        vector<int> result;
+        while (pq.size() > k)
+        {
             result.push_back(pq.top());
             pq.pop();
         }
         return result;
-
-
     }
-
+    vector<string> sortstring(const vector<string> &res)
+    {
+        vector<string> vect = res;
+        sort(vect.begin(), vect.end(), [](string a, string b)
+             {
+            if(a.length() == b.length()){
+                return a <b;
+            }
+            return a.length()<b.length(); });
+        return vect;
+    }
 };
 int main()
 {
-    vector<int> vect = {1, 2, 3, 4, 5, 6};
     test obj;
-    obj.print(vect);
-    obj.sortit(vect);
-    obj.print(vect);
+    vector<string> v = {"apple", "bat", "banana", "kiwi", "apricot"};
+    for (string str : v)
+    {
+        cout << str << " ";
+    }
+    cout << endl;
+    vector<string> vect = obj.sortstring(v);
+    for (string str : vect)
+    {
+        cout << str << " ";
+    }
+    cout << endl;
 
-    vector <pair<int,int>> vect2 = {{1,2},{2,3},{3,4}};
-    obj.sortpair(vect2);
-    obj.printpair(vect2);
-
-    vector<int> vect3 = obj.largest(vect,3);
-    obj.print(vect3);
     return 0;
 }
