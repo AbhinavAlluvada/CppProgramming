@@ -19,5 +19,7 @@ int main()
     cout << endl;
     cout << "Sum: " << sum << endl;
     cout << "Count: " << count << endl;
+
+    cout << *vect.begin()<<endl;
     return 0;
 }
