@@ -21,5 +21,8 @@ int main()
     cout << "Count: " << count << endl;
 
     cout << *vect.begin()<<endl;
+    vect[0]++;
+
+    cout << *vect.begin()<<endl;
     return 0;
 }
