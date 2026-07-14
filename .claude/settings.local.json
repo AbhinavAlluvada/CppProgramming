@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(winget install:*)",
+      "Read(//c/msys64/**)",
+      "Read(//c/msys64//**)",
+      "Bash(\"C:/msys64/msys2_shell.cmd\" -defterm -here -no-start -mingw64 -shell bash -c \"pacman -Sy --noconfirm mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gcc-libs\")",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" -lc \"pacman -Sy --noconfirm mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gcc-libs mingw-w64-ucrt-x86_64-gcc-libgfortran mingw-w64-ucrt-x86_64-gcc-fortran mingw-w64-ucrt-x86_64-crt mingw-w64-ucrt-x86_64-libwinpthread mingw-w64-ucrt-x86_64-headers mingw-w64-ucrt-x86_64-libs mingw-w64-ucrt-x86_64-python mingw-w64-ucrt-x86_64-binutils\")",
+      "Bash(\"C:/msys64/msys2_shell.cmd\" -mingw64 -here -no-start -run \"pacman -Sy --noconfirm mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gcc-libs\")",
+      "Bash(/c/msys64/usr/bin/bash.exe -lc \"pacman -Sy --noconfirm mingw-w64-ucrt-x86_64-gcc 2>&1\")",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" --login -c \"pacman -Sy --noconfirm mingw-w64-ucrt-x86_64-gcc 2>&1\")",
+      "Bash(rm -f /c/var/lib/pacman/db.lck)",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" -defterm -mingw64 -here -no-start -run \"pacman -Sy mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gcc-libs mingw-w64-ucrt-x86_64-gdb mingw-w64-ucrt-x86_64-make --noconfirm\")",
+      "Bash(/c/msys64/usr/bin/pacman.exe -Sy --noconfirm mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gcc-libs mingw-w64-ucrt-x86_64-make)"
+    ]
+  }
+}
