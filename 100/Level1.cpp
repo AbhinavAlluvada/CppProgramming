@@ -109,59 +109,76 @@ void q10()
 
 int main()
 {
-    cout << "===== Running Level 1 Questions =====" << endl;
+    cout << "\n"
+         << string(50, '=') << endl;
+    cout << "        LEVEL 1: BASIC PROGRAMMING" << endl;
+    cout << string(50, '=') << "\n"
+         << endl;
 
-    cout << "[Q1] No input needed." << endl;
+    cout << "[Q1] Print Hello World" << endl;
+    cout << "├─ No input required" << endl;
+    cout << "└─ Output: ";
     q1();
-    cout << "--- End of Q1 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q2] Input: Enter 2 integers (a b)." << endl;
+    cout << "[Q2] Sum of Two Numbers" << endl;
+    cout << "├─ Input: 2 integers (a, b)" << endl;
+    cout << "└─ Output: ";
     q2();
-    cout << "--- End of Q2 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q3] Input: Enter 2 integers (a b)." << endl;
+    cout << "[Q3] Arithmetic Operations (Sum, Difference, Product, Quotient)" << endl;
+    cout << "├─ Input: 2 integers (a, b)" << endl;
+    cout << "└─ Output:" << endl;
     q3();
-    cout << "--- End of Q3 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q4] Input: Enter radius (integer)." << endl;
+    cout << "[Q4] Circle Properties (Circumference & Area)" << endl;
+    cout << "├─ Input: radius (integer)" << endl;
+    cout << "└─ Output:" << endl;
     q4();
-    cout << "--- End of Q4 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q5] Input: Enter length and breadth (l b)." << endl;
+    cout << "[Q5] Rectangle Properties (Area & Perimeter)" << endl;
+    cout << "├─ Input: length (l), breadth (b)" << endl;
+    cout << "└─ Output:" << endl;
     q5();
-    cout << "--- End of Q5 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q6] No input needed (uses fixed values)." << endl;
+    cout << "[Q6] Swap Two Numbers (Using Third Variable)" << endl;
+    cout << "├─ Input: None (uses fixed: a=10, b=20)" << endl;
+    cout << "└─ Output:" << endl;
     q6();
-    cout << "--- End of Q6 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q7] No input needed (uses fixed values)." << endl;
+    cout << "[Q7] Swap Two Numbers (Without Third Variable)" << endl;
+    cout << "├─ Input: None (uses fixed: a=10, b=20)" << endl;
+    cout << "└─ Output: ";
     q7();
-    cout << "--- End of Q7 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q8] Input: Enter temperature in Celsius." << endl;
+    cout << "[Q8] Convert Celsius to Fahrenheit" << endl;
+    cout << "├─ Input: temperature in Celsius" << endl;
+    cout << "└─ Output: ";
     q8();
-    cout << "--- End of Q8 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q9] Input: Enter 5 subject marks." << endl;
+    cout << "[Q9] Calculate Total & Average of 5 Subject Marks" << endl;
+    cout << "├─ Input: 5 subject marks" << endl;
+    cout << "└─ Output:" << endl;
     q9();
-    cout << "--- End of Q9 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "[Q10] Input: Enter total seconds." << endl;
+    cout << "[Q10] Convert Seconds to Hours, Minutes, Seconds" << endl;
+    cout << "├─ Input: total seconds" << endl;
+    cout << "└─ Output: ";
     q10();
-    cout << "--- End of Q10 ---" << endl
-         << endl;
+    cout << endl;
 
-    cout << "===== All Questions Completed =====" << endl;
+    cout << string(50, '=') << endl;
+    cout << "     ✓ ALL LEVEL 1 QUESTIONS COMPLETED" << endl;
+    cout << string(50, '=') << "\n"
+         << endl;
 
     return 0;
 }
