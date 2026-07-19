@@ -70,64 +70,81 @@ void fib()
     cout << "Sum of n fib terms: " << sum << endl;
 }
 
-void sum_n_series(){
+void sum_n_series()
+{
     int n;
     cin >> n;
     int sum1 = 0;
     int sum2 = 0;
     int sum3 = 0;
-    for(int i =0;i<=n;i++){
+    for (int i = 0; i <= n; i++)
+    {
         sum1 = sum1 + i;
-        sum2 = sum2 + (i*i);
-        if(i != 0){
-        sum3 = sum3 + (1/i);}
+        sum2 = sum2 + (i * i);
+        if (i != 0)
+        {
+            sum3 = sum3 + (1 / i);
+        }
     }
 
-    cout << "q59: Sum: "<<sum1 <<endl;
-    cout << "q60: Sum: "<<sum2 <<endl;
-    cout << "q61: Sum: "<<sum3 <<endl;
+    cout << "q59: Sum: " << sum1 << endl;
+    cout << "q60: Sum: " << sum2 << endl;
+    cout << "q61: Sum: " << sum3 << endl;
 }
 
-int q62(int val,int pow){
+int q62(int val, int pow)
+{
     int ans = 1;
-    for(int i =0;i<pow;i++){
+    for (int i = 0; i < pow; i++)
+    {
         ans = ans * val;
     }
     return ans;
 }
 
-void q63(){
+void q63()
+{
     int n;
     cin >> n;
-    for(int i =0;i<n;i++){
-        for(int j = 0;j<=i;j++){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
             cout << "* ";
         }
         cout << endl;
     }
 }
 
-void q64(){
+void q64()
+{
     int n;
     cin >> n;
-    for(int i =0;i<n;i++){
-        for(int j = i;j<n;j++){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i; j < n; j++)
+        {
             cout << "* ";
         }
         cout << endl;
     }
 }
-void q65(){
+void q65()
+{
     int n;
     cin >> n;
-    for(int i =0;i<n;i++){
-        for(int j =i;j<n;j++){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i; j < n; j++)
+        {
             cout << "  ";
         }
-        for(int j =0;j<=i;j++){
+        for (int j = 0; j <= i; j++)
+        {
             cout << "* ";
         }
-        for(int j =1;j<=i;j++){
+        for (int j = 1; j <= i; j++)
+        {
             cout << "* ";
         }
 
@@ -135,15 +152,19 @@ void q65(){
     }
 }
 
-void triangle(){
+void triangle()
+{
     int n;
     cin >> n;
-    for(int i=0;i<n;i++){
-    int count = 1;
-        for(int j =i;j<n;j++){
+    for (int i = 0; i < n; i++)
+    {
+        int count = 1;
+        for (int j = i; j < n; j++)
+        {
             cout << "  ";
         }
-        for(int k =0;k< 2*i+1;k++){
+        for (int k = 0; k < 2 * i + 1; k++)
+        {
             cout << count << " ";
             count++;
         }
@@ -151,18 +172,29 @@ void triangle(){
     }
 }
 
-void pascal(){
+void pascal()
+{
     int n;
     cin >> n;
-    int sum =1;
-    for(int i =0;i<n;i++){
-        for(int j =i;j<n;j++){
-            cout << "  ";
+    vector<int> p = {1};
+    for (int i = 0; i < n; i++)
+    {
+        for (int k = 0; k < n - i - 1; k++)
+        {
+            cout << " ";
         }
-        for(int k =0;k <= i; k++){
-            cout << sum << " ";
+        for (int x : p)
+        {
+            cout << x << " ";
         }
-
+        vector<int> next;
+        next.push_back(1);
+        for (int j = 1; j < p.size(); j++)
+        {
+            next.push_back(p[j - 1] + p[j]);
+        }
+        next.push_back(1);
+        p = next;
         cout << endl;
     }
 }
